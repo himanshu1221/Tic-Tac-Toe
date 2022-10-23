@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+    color: white;
+    height: 75px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(77, 0, 77);
+}
+nav ul{
+    list-style-type: none;
+}
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Roboto', sans-serif;
+    margin: 6.1vw;
+    position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.box:hover{
+    background-color: plum;
+}
+
+.gameInfo{
+    padding: 4vw;
+    margin: 5px;
+    font-family: 'Baloo Bhaina 2', 'cursive';
+
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+    margin: 0 50px;
+}
+
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+.reset{
+    background-color: white;
+    color: black;
+    font-family: 'Baloo Bhaina 2', 'cursive';
+}
+.reset:hover{
+    cursor: pointer;
+    color: red;
+}
+
+.info{
+    font-family: 'Baloo Bhaina 2', 'cursive';
+}
+
+#reset{
+    margin: 0 10px;
+    padding: 0 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 7px;
+}
+
+.button{
+    justify-content: center;
+    display: flex;
+}
+
+.turn{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width : 950px){
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+        margin-right: 30px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+    display: grid;
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 20vw);
+    font-family: 'Roboto', sans-serif;
+    }
+}
+
+.line{
+    background-color: red;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
